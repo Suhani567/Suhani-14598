@@ -116,8 +116,12 @@ GET /api/submissions/:formId # Admin data
 
 ## 📱 Screenshots
 ```
-[Form Builder] [Dashboard] [Analytics] [Customization]
-[Public Form] [Data Viewer] [Mobile Responsive]
+<img width="1698" height="883" alt="image" src="https://github.com/user-attachments/assets/5bf396c4-4532-4bc0-be6c-1b773bcdddca" />
+
+<img width="786" height="648" alt="image" src="https://github.com/user-attachments/assets/8b1c8e01-4282-4f83-80e7-1341116cb8f2" />
+
+<img width="1159" height="911" alt="image" src="https://github.com/user-attachments/assets/f27f0605-5021-47d7-8945-009985a51367" />
+
 ```
 
 ## 🤝 Contributing
