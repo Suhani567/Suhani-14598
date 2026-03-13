@@ -16,23 +16,26 @@ const ProtectedRoute = ({ children }) => {
   return token ? children : <Navigate to="/admin/login" state={{ from: location }} replace />;
 };
 
-const AppContent = () => (
-  <Routes>
-    <Route path="/" element={<Navigate to="/forms" />} />
-    {/* Public */}
-    <Route path="/forms/:id" element={<FormFiller />} />
-    {/* Admin */}
-    <Route path="/admin/login" element={<AdminLogin />} />
-    <Route path="/admin/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-    <Route path="/admin/forms" element={<ProtectedRoute><FormManager /></ProtectedRoute>} />
-    <Route path="/admin/forms/new" element={<ProtectedRoute><FormBuilder /></ProtectedRoute>} />
-    <Route path="/admin/forms/:id/edit" element={<ProtectedRoute><FormBuilder isEdit /></ProtectedRoute>} />
-<Route path="/admin/data/:formId" element={<ProtectedRoute><DataViewer /></ProtectedRoute>} />
-<Route path="/admin/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
-    <Route path="/admin/customize" element={<ProtectedRoute><Customize /></ProtectedRoute>} />
-    <Route path="*" element={<Navigate to="/" replace />} />
-  </Routes>
-);
+const AppContent = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Navigate to="/admin/login" replace />} />
+      {/* Public */}
+      <Route path="/forms/:id" element={<FormFiller />} />
+      {/* Admin */}
+      <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/admin/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+      <Route path="/admin/forms" element={<ProtectedRoute><FormManager /></ProtectedRoute>} />
+      <Route path="/admin/forms/new" element={<ProtectedRoute><FormBuilder /></ProtectedRoute>} />
+      <Route path="/admin/forms/:id/edit" element={<ProtectedRoute><FormBuilder isEdit /></ProtectedRoute>} />
+      <Route path="/admin/data/:formId" element={<ProtectedRoute><DataViewer /></ProtectedRoute>} />
+      <Route path="/admin/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
+      <Route path="/admin/customize" element={<ProtectedRoute><Customize /></ProtectedRoute>} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
+};
+
 
 const App = () => (
   <AuthProvider>
