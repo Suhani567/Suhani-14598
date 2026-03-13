@@ -64,7 +64,8 @@ const FormManager = () => {
                 {form.isActive ? <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs">Active</span> : <span className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">Draft</span>}
               </div>
               <div className="flex gap-2">
-                <Link to={`/admin/forms/${form._id}/edit`} className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-xl text-center font-medium hover:bg-blue-700 transition">Edit</Link>
+<Link to={`/admin/forms/${form._id}/edit`} className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-xl text-center font-medium hover:bg-blue-700 transition mr-1">Edit</Link>
+                <Link to={`/forms/${form._id}`} target="_blank" className="bg-green-600 text-white py-2 px-4 rounded-xl text-center font-medium hover:bg-green-700 transition">🔗 Fill Form</Link>
                 <button onClick={() => handleDuplicate(form._id)} className="px-4 py-2 bg-green-600 text-white rounded-xl font-medium hover:bg-green-700 transition">Duplicate</button>
                 <button onClick={() => handleDelete(form._id)} className="px-4 py-2 bg-red-600 text-white rounded-xl font-medium hover:bg-red-700 transition">Delete</button>
               </div>

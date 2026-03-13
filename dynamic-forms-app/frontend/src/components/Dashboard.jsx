@@ -23,14 +23,14 @@ const Dashboard = () => {
             <h3 className="text-2xl font-bold text-gray-800 mb-4">📋 Forms</h3>
             <p className="text-gray-600">Create, edit, manage your forms</p>
           </Link>
-          <div className="bg-gradient-to-br from-green-400 to-blue-500 p-8 rounded-2xl shadow-xl text-white">
+<Link to="/admin/analytics" className="bg-gradient-to-br from-green-400 to-blue-500 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all text-white cursor-pointer">
             <h3 className="text-2xl font-bold mb-4">📊 Analytics</h3>
-            <p>View submissions coming soon</p>
-          </div>
-          <div className="bg-gradient-to-br from-purple-400 to-pink-500 p-8 rounded-2xl shadow-xl text-white">
-            <h3 className="text-2xl font-bold mb-4">⚙️ Settings</h3>
-            <p>Customize app coming soon</p>
-          </div>
+            <p>View submissions, trends, charts</p>
+          </Link>
+<Link to="/admin/customize" className="bg-gradient-to-br from-purple-400 to-pink-500 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all text-white cursor-pointer">
+            <h3 className="text-2xl font-bold mb-4">⚙️ Customize</h3>
+            <p>Colors, fonts, logo, CSS</p>
+          </Link>
         </div>
       </div>
     </div>
